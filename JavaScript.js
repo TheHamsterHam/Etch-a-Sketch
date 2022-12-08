@@ -1,7 +1,14 @@
 const creatediv = document.querySelector('.container');
 
 const makeGrid = (alotofGrids) => {
-  for(let i = 0;  i < alotofGrids)
+  for (let i = 0;  i < alotofGrids; i++) {
+    const row = document.createElement('div')
+    row.classList.add('gridwithrows')
+
+    for (let r = 0; r < alotofGrids; r++) {
+      const gridBox = document.createElement('div')
+    }
+  }
 }
 
 
