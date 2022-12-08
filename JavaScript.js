@@ -1,20 +1,22 @@
-const creatediv = document.querySelector('.container');
+const resetButton = document.querySelector('button')
+const container = document.querySelector('.container')
 
-const makeGrid = (alotofGrids) => {
+const createGrid = (alotofGrids) => {
   for (let i = 0;  i < alotofGrids; i++) {
     const row = document.createElement('div')
-    row.classList.add('gridwithrows')
+    row.classList.add('grid-row')
 
     for (let r = 0; r < alotofGrids; r++) {
-      const GridBox = document.createElement('div')
-      GridBox.classList.add('grid-box')
-      row.appendChild(GridBox)
+      const gridBox = document.createElement('div')
+      gridBox.classList.add('grid-box')
+      row.appendChild(gridBox)
     }
 
     container.appendChild(row)
   }
 }
-
+sizeOfGrid = 16;
+createGrid(sizeOfGrid)
 
 
 
