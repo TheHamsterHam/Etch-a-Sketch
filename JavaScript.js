@@ -6,7 +6,9 @@ const makeGrid = (alotofGrids) => {
     row.classList.add('gridwithrows')
 
     for (let r = 0; r < alotofGrids; r++) {
-      const gridBox = document.createElement('div')
+      const GridBox = document.createElement('div')
+      GridBox.classList.add('grid-box')
+      row.appendChild(GridBox)
     }
   }
 }
