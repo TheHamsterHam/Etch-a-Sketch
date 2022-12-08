@@ -10,6 +10,8 @@ const makeGrid = (alotofGrids) => {
       GridBox.classList.add('grid-box')
       row.appendChild(GridBox)
     }
+
+    container.appendChild(row)
   }
 }
 
