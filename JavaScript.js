@@ -13,8 +13,8 @@ const createGrid = (alotofGrids) => {
       gridBox.style.width = `${widthAndHeight}px`
       gridBox.style.height = `${widthAndHeight}px`
 
-      gridBox.addEventListener('mouseclick', () => {
-        gridBox.style.backgroundColor = 'black'
+      gridBox.addEventListener('mouseenter', () => {
+        gridBox.style.backgroundColor = 'red'
       })
       row.appendChild(gridBox)
     }
