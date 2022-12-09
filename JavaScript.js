@@ -7,8 +7,15 @@ const createGrid = (alotofGrids) => {
     row.classList.add('grid-row')
 
     for (let r = 0; r < alotofGrids; r++) {
+      const widthAndHeight = 960 / sizeOfGrid
       const gridBox = document.createElement('div')
       gridBox.classList.add('grid-box')
+      gridBox.style.width = `${widthAndHeight}px`
+      gridBox.style.height = `${widthAndHeight}px`
+
+      gridBox.addEventListener('mouseclick', () => {
+        gridBox.style.backgroundColor = 'black'
+      })
       row.appendChild(gridBox)
     }
 
