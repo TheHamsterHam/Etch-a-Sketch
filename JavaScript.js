@@ -1,7 +1,10 @@
 const resetButton = document.querySelector('button')
 const container = document.querySelector('.container')
+const sizeOfGrid = 16;
 
 const createGrid = (alotofGrids) => {
+  const wrapper = document.createElement('div')
+  wrapper.classList.add('wrapper')
   for (let i = 0;  i < alotofGrids; i++) {
     const row = document.createElement('div')
     row.classList.add('grid-row')
@@ -12,19 +15,42 @@ const createGrid = (alotofGrids) => {
       gridBox.classList.add('grid-box')
       gridBox.style.width = `${widthAndHeight}px`
       gridBox.style.height = `${widthAndHeight}px`
-
+      //the mouser addEventListener change the colour when the mouse hovers.
       gridBox.addEventListener('mouseenter', () => {
         gridBox.style.backgroundColor = 'red'
       })
       row.appendChild(gridBox)
     }
 
-    container.appendChild(row)
+    wrapper.appendChild(row)
   }
+  container.appendChild(wrapper)
 }
-sizeOfGrid = 16;
+
 createGrid(sizeOfGrid)
 
+resetButton.addEventListener('click', () => {
+  let unserSize = Number(prompt('How big of a size would you like to Etch A Stetch to be?'))
+
+  while (unserSize > 50) {
+    unserSize = Number(prompt('Please pick a smaller number under 50!'))
+  }
+
+  const wrapper = document.querySelector('.wrapper')
+  wrapper.remove()
+  createGrid(unserSize)
+})
+
+//sizeOfGrid = 16;
+//createGrid(sizeOfGrid)
+
+//#can also be enter after the fact
+//const addDivs = document.querySelectorAll('grid-box')
+//addDivs.forEach(div => {
+//  div.addEventListener('mouseenter', () =>{
+//    gridBox.style.backgroundColor = 'red'
+//})
+//})
 
 
 // Add 16 divs
