@@ -17,7 +17,7 @@ const createGrid = (alotofGrids) => {
     const row = document.createElement('div')
     row.classList.add('grid-row')
 
-    for (let r = 0; r < alotofGrids; r++) {
+    for (let c = 0; c < alotofGrids; r++) {
       const widthAndHeight = 960 / sizeOfGrid
       const gridBox = document.createElement('div')
       gridBox.classList.add('grid-box')
