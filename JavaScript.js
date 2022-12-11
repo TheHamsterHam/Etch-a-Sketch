@@ -27,8 +27,14 @@ const createGrid = (alotofGrids) => {
       gridBox.style.height = `${widthAndHeight}px`
       //the mouser addEventListener change the colour when the mouse hovers.
       gridBox.addEventListener('mouseenter', () => {
-        const RGBColor = "rgb(" + r + "," + g + "," + b +")"
-        gridBox.style.background = RGBColor
+        //const RGBColor = "rgb(" + r + "," + g + "," + b +")"
+        const currentOpacity = gridBox.style.opacity
+        gridBox.style.background = `rgb(0, 0, 0)`
+        if (currentOpacity) {
+          gridBox.style.opacity = Number(currentOpacity) + .1
+        } else {
+          gridBox.style.opacity = .1
+        }
       })
       row.appendChild(gridBox)
     }
