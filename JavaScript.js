@@ -32,8 +32,8 @@ createGrid(sizeOfGrid)
 resetButton.addEventListener('click', () => {
   let unserSize = Number(prompt('How big of a size would you like to Etch A Stetch to be?'))
 
-  while (unserSize > 50) {
-    unserSize = Number(prompt('Please pick a smaller number under 50!'))
+  while (unserSize > 74) {
+    unserSize = Number(prompt('Please pick a smaller number under 74!'))
   }
 
   const wrapper = document.querySelector('.wrapper')
