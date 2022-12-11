@@ -2,6 +2,14 @@ const resetButton = document.querySelector('button')
 const container = document.querySelector('.container')
 const sizeOfGrid = 16;
 
+const randomRGB = () => {
+  const r = Math.floor(Math.random() * 256)
+  const g = Math.floor(Math.random() * 256)
+  const b = Math.floor(Math.random() * 256)
+
+  return {r, g, b}
+}
+
 const createGrid = (alotofGrids) => {
   const wrapper = document.createElement('div')
   wrapper.classList.add('wrapper')
